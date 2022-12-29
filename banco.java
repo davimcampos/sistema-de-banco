@@ -20,13 +20,13 @@ public class banco {
     	System.out.println("Digite o saldo da sua conta Corrente: ");
     	saldoContaCorrente=dados.nextDouble();
     	System.out.println("------------- // -------------");
-    	System.out.println("Digite o numero da conta Poupança: ");
+    	System.out.println("Digite o numero da conta PoupanÃ§a: ");
     	contaP=dados.nextInt();
     	System.out.println("------------- // -------------");
-    	System.out.println("Saldo o saldo da sua conta Poupança");
+    	System.out.println("Saldo o saldo da sua conta PoupanÃ§a");
     	saldoPoupanca=dados.nextDouble();
     	System.out.println("------------- // -------------");
-    	System.out.println("Qual a operação deseja realizar:");
+    	System.out.println("Qual a operaÃ§Ã£o deseja realizar:");
     	do {
     		System.out.println("1 - Creditar");
     		System.out.println("2 - Debitar");
@@ -36,13 +36,13 @@ public class banco {
     		opcao=dados.nextInt();
     		System.out.println("------------- // -------------");
 
-			// COMANDO PARA A OPÇÃO DE CREDITAR VALOR NAS CONTAS
+			// COMANDO PARA A OPÃ‡ÃƒO DE CREDITAR VALOR NAS CONTAS
     		if (opcao==1){
-    			System.out.println("Você Escolheu Creditar");
+    			System.out.println("VocÃª Escolheu Creditar");
     			System.out.println("------------- // -------------");
     			System.out.println("Em qual conta deseja Creditar ?");
     			System.out.println("1 - Corrente");
-    			System.out.println("2 - Poupança");
+    			System.out.println("2 - PoupanÃ§a");
     			System.out.println("------------- // -------------");
     			subOpcao=dados.nextInt();
     			if (subOpcao==1){
@@ -53,24 +53,24 @@ public class banco {
     				System.out.println("------------- // -------------");
     			}
     			else if (subOpcao==2){
-    				System.out.println("Qual o valor a creditar na conta Poupança " +contaP );
+    				System.out.println("Qual o valor a creditar na conta PoupanÃ§a " +contaP );
     				creditar=dados.nextDouble();
     				saldoPoupanca+=creditar;
-    				System.out.printf("Saldo atual na Conta Corrente -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
+    				System.out.printf("Saldo atual na Conta PoupanÃ§a -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
     				System.out.println("------------- // -------------");
     			}
     			else
-    				System.out.println("OPÇÃO INVÁLIDA, TENTE NOVAMENTE");
+    				System.out.println("OPÃ‡ÃƒO INVÃLIDA, TENTE NOVAMENTE");
     		}
 
 
-    			//COMANDO PARA A OPÇÃO DEBITAR VALOR NAS CONTAS
+    			//COMANDO PARA A OPÃ‡ÃƒO DEBITAR VALOR NAS CONTAS
     		else if (opcao==2){
-    			System.out.println("Você Escolheu Debitar");
+    			System.out.println("VocÃª Escolheu Debitar");
     			System.out.println("------------- // -------------");
     			System.out.println("Em qual conta deseja Debitar ?");
     			System.out.println("1 - Corrente");
-    			System.out.println("2 - Poupança");
+    			System.out.println("2 - PoupanÃ§a");
     			System.out.println("------------- // -------------");
     			subOpcao=dados.nextInt();
     			if (subOpcao==1){
@@ -81,30 +81,30 @@ public class banco {
     				System.out.println("------------- // -------------");
     			}
     			else if (subOpcao==2){
-    				System.out.println("Qual o valor a debitar na conta Poupança " +contaP );
+    				System.out.println("Qual o valor a debitar na conta PoupanÃ§a " +contaP );
     				debitar=dados.nextDouble();
     				if (debitar>saldoPoupanca){
     				System.out.println("SALDO INSUFICIENTE");
-    				System.out.printf("Saldo atual na Conta Corrente -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
+    				System.out.printf("Saldo atual na Conta PoupanÃ§a -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
     				System.out.println("------------- // -------------");
     				}
     				else{
     					saldoPoupanca-=debitar;
-    					System.out.printf("Saldo atual na Conta Corrente -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
+    					System.out.printf("Saldo atual na Conta PoupanÃ§a -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
     				System.out.println("------------- // -------------");
     				}
     			}
     			else
-    				System.out.println("OPÇÃO INVÁLIDA, TENTE NOVAMENTE");
+    				System.out.println("OPÃ‡ÃƒO INVÃLIDA, TENTE NOVAMENTE");
 
     		}
 
-    			//COMANDO PARA A OPÇÃO DE TRANSFERIR VALOR NAS CONTAS
+    			//COMANDO PARA A OPÃ‡ÃƒO DE TRANSFERIR VALOR NAS CONTAS
     		else if (opcao==3){
-    			System.out.println("Você Escolheu Transferir");
+    			System.out.println("VocÃª Escolheu Transferir");
     			System.out.println("------------- // -------------");
-    			System.out.println("1 - Corrente para poupança");
-    			System.out.println("2 - Poupança para conta corrente");
+    			System.out.println("1 - Corrente para poupanÃ§a");
+    			System.out.println("2 - PoupanÃ§a para conta corrente");
     			System.out.println("------------- // -------------");
     			subOpcao=dados.nextInt();
     			if (subOpcao==1){
@@ -113,7 +113,7 @@ public class banco {
     				saldoPoupanca+=transferencia;
     				saldoContaCorrente-=transferencia;
     				System.out.printf("Saldo atual na Conta Corrente -> " + contaC + " R$ %.2f\n " , saldoContaCorrente);
-    				System.out.printf("Saldo atual na Conta Corrente -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
+    				System.out.printf("Saldo atual na Conta PoupanÃ§a -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
     				System.out.println("------------- // -------------");
     			}
     			else if (subOpcao==2){
@@ -123,7 +123,7 @@ public class banco {
     					saldoContaCorrente+=transferencia;
     					saldoPoupanca-=transferencia;
     					System.out.printf("Saldo atual na Conta Corrente -> " + contaC + " R$ %.2f\n " , saldoContaCorrente);
-    					System.out.printf("Saldo atual na Conta Corrente -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
+    					System.out.printf("Saldo atual na Conta PoupanÃ§a -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
     				System.out.println("------------- // -------------");
     					}
     					else{
@@ -131,20 +131,20 @@ public class banco {
     					System.out.println();
     					System.out.println("SALDO INSUFICIENTE");
     					System.out.printf("Saldo atual na Conta Corrente -> " + contaC + " R$ %.2f\n " , saldoContaCorrente);
-    					System.out.printf("Saldo atual na Conta Corrente -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
+    					System.out.printf("Saldo atual na Conta PoupanÃ§a -> " + contaP + " R$ %.2f\n " , saldoPoupanca);
     					System.out.println("------------- // -------------");
     					}
     			}
 
     		}
 
-    			//COMANDO PARA OPÇÃO DE VER O SALDO DAS CONTAS
+    			//COMANDO PARA OPÃ‡ÃƒO DE VER O SALDO DAS CONTAS
     		else if (opcao==4){
-    			System.out.println("Você Escolheu Saldo");
+    			System.out.println("VocÃª Escolheu Saldo");
     			System.out.println("------------- // -------------");
     			System.out.println("Senhor "+nome);
     			System.out.printf("Saldo atual na Conta Corrente " + contaC + " R$ %.2f\n", saldoContaCorrente);
-    			System.out.printf("Saldo atual na Conta Corrente " + contaP + " R$ %.2f\n", saldoPoupanca);
+    			System.out.printf("Saldo atual na Conta PoupanÃ§a " + contaP + " R$ %.2f\n", saldoPoupanca);
     			System.out.println("------------- // -------------");
     		}
 
